@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name" : "Recipe Blog Site",
+      "filePath" : "/gifs/heshel.gif",
+      "live" : "https://nextjs-blog-olive-chi-52.vercel.app/",
+      "sourceCode": "https://github.com/rezuan-riyad/nextjs-blog",
+      "image": "/images/heshel.png"
+    },
+    {
+      "id": 2,
+      "name" : "Portfolio",
+      "filePath" : "/gifs/portfolio.gif",
+      "live" : "",
+      "sourceCode": "",
+      "image": "/images/portfolio.png"
+    },
+    {
+      "id": 3,
+      "name": "Simple JavaScript Calculator",
+      "filePath": "/gifs/js-calculator.gif",
+      "live": "",
+      "sourceCode": "https://github.com/rezuan-riyad/JS-Calculator",
+      "image": "/images/calculator.png"
+    },
+    {
+      "id": 4,
+      "name": "Simple Todo App",
+      "filePath": "/gifs/todo.gif",
+      "live": "https://rezuan-riyad.github.io/todo-app/",
+      "sourceCode": "https://github.com/rezuan-riyad/todo-app",
+      "image": "/images/todo.png"
+    },
+    {
+      "id": 5,
+      "name": "Social Media App: Eduhub",
+      "filePath": "/gifs/eduhub.gif",
+      "live": "https://605a08a18c4bc64d035f9a6f--jovial-ptolemy-11f35a.netlify.app/",
+      "sourceCode": "",
+      "image": "/images/eduhub.png"
+    }
+  ]
+}

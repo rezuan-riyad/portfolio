@@ -1,0 +1,17 @@
+.navRoutes{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  background-color: var(--blueGray);
+  z-index: 1000;
+}
+
+.navRoutes a{
+  padding: 1rem 1.5rem;
+}
+
+.navRoutes a:hover{
+  background-color: var(--blueGrayDark);
+}
