@@ -32,5 +32,4 @@ export default function (req, res) {
       res.send("success")
     }
   })
-  console.log(req.body)
 }

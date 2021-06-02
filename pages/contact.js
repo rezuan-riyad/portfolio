@@ -7,6 +7,7 @@ export default function Contact() {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [submissionMsg, setSubmissionMsg] = useState("")
   const [sending, setSending] = useState(false)
 
   const [nameerror, setNameerror] = useState(false)
@@ -26,6 +27,7 @@ export default function Contact() {
     // post request for email sending if no error
     if ( !nameerror && !emailerror && message.length > 150) {
       setSending(true)
+      setSubmissionMsg("")
       let data = { name, email, message }
       fetch('/api/contact', {
         method: 'POST',
@@ -44,6 +46,7 @@ export default function Contact() {
         } else {
           setSending(false)
           setSubmitted(false)
+          setSubmissionMsg("Something went wrong.")
         }
       })
     } else {
@@ -62,7 +65,7 @@ export default function Contact() {
       <form className={styles.form} onSubmit={handleSubmit}>
 
         <h2>Write Me</h2>
-        { submitted ? <p className={styles.msg}>Thanks for messaging.</p> : null }
+        { submitted ? <p className={styles.msg}>Thanks for messaging.</p> : <p>{submissionMsg}</p> }
           <input
             type="text"
             value={name}
