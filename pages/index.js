@@ -30,7 +30,7 @@ export default function Home() {
             <Link href="https://github.com/rezuan-riyad">
               <a><FontAwesomeIcon icon={faGithub} /></a>
             </Link>
-            <Link href="https://www.facebook.com">
+            <Link href="https://www.linkedin.com/in/rezuan-rio/">
               <a><FontAwesomeIcon icon={faLinkedin} /></a>
             </Link>
           </section>
