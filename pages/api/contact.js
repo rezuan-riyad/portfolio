@@ -1,3 +1,7 @@
+// Vercel Platform block SMTP by default,
+// need to implement third party mail services
+// https://vercel.com/support/articles/serverless-functions-and-smtp
+
 export default function (req, res) {
   require('dotenv').config()
   let nodemailer = require('nodemailer')

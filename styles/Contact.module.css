@@ -1,5 +1,25 @@
 /* contact page style */
 
+.contactPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leftSide{
+  margin-top: 10px;
+  min-width: auto;
+  padding: 30px;
+}
+
+@media only screen and (max-width:700px){
+  .contactPage{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .form{
   width: 600px;
   padding: 0 20px 20px 20px;

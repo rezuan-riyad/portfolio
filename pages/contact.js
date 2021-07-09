@@ -13,19 +13,20 @@ export default function Contact() {
   const [nameerror, setNameerror] = useState(false)
   const [emailerror, setEmailerror] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     setSubmitted(false)
-    
+
     // name and email error checking
-    name.length < 3 ? 
+    name.length < 3 ?
       setNameerror(true) : setNameerror(false)
     email.length == 0 ?
       setEmailerror(true) : setEmailerror(false)
 
     // post request for email sending if no error
-    if ( !nameerror && !emailerror && message.length > 150) {
+    
+    if (!nameerror && !emailerror && message.length > 150) {
       setSending(true)
       setSubmissionMsg("")
       let data = { name, email, message }
@@ -49,8 +50,6 @@ export default function Contact() {
           setSubmissionMsg("Something went wrong.")
         }
       })
-    } else {
-      console.log("Something went wrong")
     }
   }
 
@@ -62,17 +61,26 @@ export default function Contact() {
 
   return (
     <Layout title="Contact">
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.contactPage}>
+        {/* Left Side */}
+        <div className={styles.leftSide}>
+          <h1>Hire Me</h1>
+          <p>to build your web app. I beleive in quality work.</p>
+          <p>Email: riyad.rbm@gmail.com</p>
+        </div>
 
-        <h2>Write Me</h2>
-        { submitted ? <p className={styles.msg}>Thanks for messaging.</p> : <p>{submissionMsg}</p> }
+        {/* Form section */}
+        <form className={styles.form} onSubmit={handleSubmit}>
+
+          <h1>Write Me</h1>
+          {submitted ? <p className={styles.msg}>Thanks for messaging.</p> : <p>{submissionMsg}</p>}
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Your Name" />
           <p className={styles.helperText}>
-            { nameerror ? "Name should be at least 3 charecters." : null }
+            {nameerror ? "Name should be at least 3 charecters." : null}
           </p>
 
           <input
@@ -81,7 +89,7 @@ export default function Contact() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your Email" />
           <p className={styles.helperText}>
-            { emailerror ? "Email is required" : null }
+            {emailerror ? "Email is required" : null}
           </p>
 
           <textarea
@@ -93,14 +101,15 @@ export default function Contact() {
             {message.length < 150 ? "At least 150 charecters are required" : <span>Perfect!</span>}
           </p>
 
-        <div className={styles.btnGroup}>
-          <button className={styles.btn} type="submit" disabled={message.length < 150}>
-            { sending ? "Sending...    " : "Send Message"}
-          </button>
-          <button onClick={handleClear}>Clear Message</button>
-        </div>
+          <div className={styles.btnGroup}>
+            <button className={styles.btn} type="submit" disabled={message.length < 150}  >
+              {sending ? "Sending...    " : "Send Message"}
+            </button>
+            <button onClick={handleClear}>Clear Message</button>
+          </div>
 
-      </form>
+        </form>
+      </div>
     </Layout>
   )
 }
