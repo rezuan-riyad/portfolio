@@ -16,7 +16,7 @@ export default function Home() {
           <h1>Hi, I am Rezuan Ahmed Riyad</h1>
           <h3>Web Developer</h3>
           <p>
-            I am a self taught web programmer. During one and half year of my self study I learnt some modern 
+            I am a self taught web programmer. During my self study I learnt some modern 
             tools to build websites. Besides I have hands on experience of bulding modern web app.
             Following tools I used in my self motivated projetcs.
           </p>
@@ -25,6 +25,10 @@ export default function Home() {
               <li>ReactJS, Redux Store</li>
               <li>MongoDB, Node.js, Express</li>
             </ul>
+          <hr />
+          <h3>Education</h3>
+          <h5>Bachelor of Science in Physics</h5>
+          <p>Rajshai University, Bangladesh</p>
           <section className={styles.mediaLinks}>
             <Link href="https://github.com/rezuan-riyad">
               <a><FontAwesomeIcon icon={faGithub} /></a>
