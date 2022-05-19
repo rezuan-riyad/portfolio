@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             <img src="propic1.jpg" className={styles.image} />
           </div>
           <Typography variant="subtitle1" style={{ textAlign: "center" }}>Rezuan Riyad</Typography>
-          <Typography variant="subtitle2" style={{ textAlign: "center " }}>
+          <Typography variant="subtitle2" style={{ textAlign: "center" }}>
             <Typewriter
               options={{
                 strings: ['Web Developer', 'Browser Extension Developer', 'Web Scrapper'],
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
 
 
           <div className={styles.stack}>
-            <Typography variant="h3" gutterBottom>Experiance</Typography>
+            <Typography variant="h3" gutterBottom>Work Experience</Typography>
             <Typography variant="subtitle1">Freelance Web Developer, Gazipur, Bangladesh</Typography>
             <Typography variant="subtitle2" sx={{ color: "text.secondary" }}><i>September, 2021 - Present</i></Typography>
 
