@@ -1,4 +1,4 @@
-:root{
+:root {
   --blueGray: #cfd8dc;
   --blueGrayDark: #b0bec5;
   --dark: #263238;
@@ -13,7 +13,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: var(--blueGray);
+  background-color: #f7f7f7;
 }
 
 a {
@@ -27,13 +27,16 @@ a {
   padding: 0;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   margin-top: .5rem;
   margin-bottom: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
-p{
+
+p {
   margin-bottom: .5rem;
   font-size: .9rem;
   line-height: 1.5rem;
@@ -41,7 +44,7 @@ p{
   letter-spacing: 1px;
 }
 
-button{
+button {
   margin: 1.5rem 2rem 0 2rem;
   padding: .75rem 1.25rem;
   border: 1px solid var(--dark);
@@ -54,45 +57,64 @@ button{
 }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   background-color: var(--disabledBtn);
   border: 1px solid var(--disabledBtn);
-  color:lightgray;
+  color: lightgray;
 }
 
 ::placeholder {
-  color:rgb(80, 80, 80);
-  opacity: 1; 
+  color: rgb(80, 80, 80);
+  opacity: 1;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
 }
 
-.contentBody{
+.contentBody {
   position: absolute;
-  max-width: 1024px;
   margin-top: 60px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
 }
 
-.active{
+.active {
   background-color: var(--dark) !important;
   color: var(--white);
 }
 
-.fa-github, .fa-linkedin, .fa-yahoo{
+.fa-github,
+.fa-linkedin,
+.fa-yahoo {
   font-size: 24px;
   color: var(--dark);
   margin-top: 1rem;
   margin-right: 20px;
 }
 
-.customModal{
+.customModal {
   min-width: 300px;
   margin: auto;
   height: 90vh;
   width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+
+  .contentBody {
+    padding: 0 3rem;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* For Desktop:  */
+  .contentBody {
+    padding: 0 5rem;
+    max-width: 1024px;
+  }
 }
